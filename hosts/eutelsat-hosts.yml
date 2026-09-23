@@ -1,0 +1,79 @@
+generated: '2026-09-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 6
+  own: 5
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - other
+  - security
+  - website
+hosts:
+- host: api.eutelsat.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: eutelsat.com
+  role: api
+  relation: own
+- host: eutelsat.com
+  found_by:
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: eutelsat.com
+  role: other
+  relation: own
+- host: partner-portal.eutelsat.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: eutelsat.com
+  role: other
+  relation: own
+- host: webapps.eutelsat.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: eutelsat.com
+  role: other
+  relation: own
+- host: www.eutelsat.com
+  found_by:
+  - pointer
+  - vendor-detect
+  types:
+  - Newsroom
+  - Blog
+  - Website
+  serves:
+  - cdn
+  vendor: cloudfront
+  registrable_domain: eutelsat.com
+  role: website
+  relation: own
+- host: www.eutelsat.com:443
+  found_by:
+  - pointer
+  types:
+  - Security
+  - PrivacyPolicy
+  serves: []
+  registrable_domain: eutelsat.com:443
+  role: security
+  relation: other-domain

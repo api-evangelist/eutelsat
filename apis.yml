@@ -1,23 +1,74 @@
 aid: eutelsat
+
 name: Eutelsat
-description: 'Eutelsat is a company surfaced via the API Evangelist harvest backlog (source: space) and
-  added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.eutelsat.com/sites/default/files/2026-08/Composite-Images-20260803-124639.png
+
+description: 'Eutelsat is a high‑performance multi‑orbit satellite communications operator offering GEO and OneWeb LEO satellite services. It provides resilient, secure connectivity for land, sea and air customers, operating 31 GEO satellites and a constellation of over 600 LEO satellites to deliver broadband and data services worldwide.'
+
 url: https://raw.githubusercontent.com/api-evangelist/eutelsat/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:space
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-22'
+
 modified: '2026-09-22'
+
 tags:
 - Company
-apis: []
+- Satellite
+- Communications
+- GEO
+- LEO
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/eutelsat-llms.txt
+- type: WellKnown
+  url: well-known/eutelsat-well-known.yml
+- type: Hosts
+  url: hosts/eutelsat-hosts.yml
+- type: Vendors
+  url: vendors/eutelsat-vendors.yml
+- type: Security
+  url: https://www.eutelsat.com:443/satellite-services/government/security
+- type: PrivacyPolicy
+  url: https://www.eutelsat.com:443/privacy-policy
+- type: Newsroom
+  url: https://www.eutelsat.com/media-press/media-centre/news/full-year-2024-25-results
+- type: Blog
+  url: https://www.eutelsat.com/mediacentre/blog/redefining-inflight-connectivity
+- type: DomainSecurity
+  url: security/eutelsat-domain-security.yml
 - type: Website
-  url: https://eutelsat.com/
+  url: https://www.eutelsat.com/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: API documentation appears to be rendered via JavaScript with no accessible OpenAPI spec.
+  evidence:
+    - url: https://api.eutelsat.com/openapi.json
+      status: 0
+  checked: 2026-09-22
+x-enrichment:
+  date: '2026-09-22'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
