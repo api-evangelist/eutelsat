@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "eutelsat",
+    "captured_at": "2026-10-11T184844",
+    "source_url": "https://www.eutelsat.com/",
+    "source_type": "Website",
+    "file": "eutelsat-2026-10-11T184844.png",
+    "bytes": 983284,
+    "capture": "playwright-local"
+  }
+]
